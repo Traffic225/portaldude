@@ -1,0 +1,27 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Express",
+      "type": "shell",
+      "command": "npm start",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Flask",
+      "type": "process",
+      "command": "python",
+      "args": ["-m","venv",".venv"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Activate venv & Run Flask",
+      "type": "shell",
+      "command": ".venv\\Scripts\\Activate.ps1; python app.py",
+      "windows": {
+        "command": ".venv\\Scripts\\Activate.ps1; python app.py"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
